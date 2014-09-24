@@ -57,7 +57,7 @@ macro(_ament_package_xml dest_dir)
 
   # stamp package.xml as well as script to generate CMake code from it
   stamp(${PACKAGE_XML_DIRECTORY}/package.xml)
-  stamp("${ament_cmake_core_DIR}/package_xml_2_cmake.py")
+  stamp("${ament_cmake_core_DIR}/core/package_xml_2_cmake.py")
 
   # extract information from package.xml
   file(MAKE_DIRECTORY ${dest_dir})
@@ -67,7 +67,7 @@ macro(_ament_package_xml dest_dir)
   endif()
   set(_cmd
     "${PYTHON_EXECUTABLE}"
-    "${ament_cmake_core_DIR}/package_xml_2_cmake.py"
+    "${ament_cmake_core_DIR}/core/package_xml_2_cmake.py"
     "${PACKAGE_XML_DIRECTORY}/package.xml"
     "${dest_dir}/package.cmake"
   )

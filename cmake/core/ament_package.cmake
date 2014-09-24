@@ -96,16 +96,16 @@ function(_ament_package)
   endforeach()
 
   # generate CMake config file
-  stamp("${ament_cmake_core_DIR}/templates/nameConfig.cmake.in")
+  stamp("${ament_cmake_core_DIR}/core/templates/nameConfig.cmake.in")
   configure_file(
-    ${ament_cmake_core_DIR}/templates/nameConfig.cmake.in
+    ${ament_cmake_core_DIR}/core/templates/nameConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/ament_cmake_core/${PROJECT_NAME}Config.cmake
     @ONLY
   )
   # generate CMake config-version file
-  stamp("${ament_cmake_core_DIR}/templates/nameConfig-version.cmake.in")
+  stamp("${ament_cmake_core_DIR}/core/templates/nameConfig-version.cmake.in")
   configure_file(
-    ${ament_cmake_core_DIR}/templates/nameConfig-version.cmake.in
+    ${ament_cmake_core_DIR}/core/templates/nameConfig-version.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/ament_cmake_core/${PROJECT_NAME}Config-version.cmake
     @ONLY
   )

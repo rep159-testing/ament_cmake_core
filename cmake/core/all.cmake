@@ -1,6 +1,6 @@
 # prevent multiple inclusion
 if(DEFINED _AMENT_CMAKE_CORE_INCLUDED)
-  message(FATAL_ERROR "ament_cmake_core/cmake/CMakeLists.cmake included "
+  message(FATAL_ERROR "ament_cmake_core/cmake/core/all.cmake included "
     "multiple times")
 endif()
 set(_AMENT_CMAKE_CORE_INCLUDED TRUE)
@@ -61,7 +61,7 @@ foreach(filename
   "stamp"
   "string_ends_with"
 )
-  include(${ament_cmake_core_DIR}/${filename}.cmake)
+  include(${ament_cmake_core_DIR}/core/${filename}.cmake)
 endforeach()
 
 # ensure that no current package name is set
